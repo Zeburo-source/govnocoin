@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КАЛ кликер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="counter">0</div>
+        <div id="cph">КАЛ в час: <span id="clicksPerHour">0</span></div>
+        <button id="clickButton">
+            <img src="coin.png" alt="Coin" id="coinImage">
+        </button>
+    </div>
+    <div id="upgrade">
+        <h2>Улучшение ГОВНА</h2>
+        <button id="upgradeButton">Улучшить КАЛ (Цена: <span id="upgradeCost">10</span>)</button>
+        <button id="passiveButton" onclick="toggleMenu()">Пассивное говно</button>
+        <div id="passiveMenu" class="menu">
+            <div class="tile passiveUpgrade" data-cost="100" data-income="1">
+                <img src="upgrade1.png" alt="Upgrade 1">
+                <div>Котлета<br>(Цена: 100, +1/s)</div>
+            </div>
+            <div class="tile passiveUpgrade" data-cost="500" data-income="5">
+                <img src="upgrade2.png" alt="Upgrade 2">
+                <div>КрыжОвник<br>(Цена: 500, +5/s)</div>
+            </div>
+            <div class="tile passiveUpgrade" data-cost="2000" data-income="20">
+                <img src="upgrade3.png" alt="Upgrade 3">
+                <div>Шавуха с вокзала<br>(Cost: 2000, +20/s)</div>
+            </div>
+        </div>
+    </div>
+    <button id="themeToggle">Темная тема</button>
+
+    <!-- Панель разработчика -->
+    <div id="devTools">
+        <h3>Dev Tools</h3>
+        <label for="devCounter">Set Counter:</label>
+        <input type="number" id="devCounter" value="0">
+        <button id="setCounterButton">Set</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
